@@ -23,6 +23,6 @@ while(c < climit):#len(os.listdir("temp"))):
             print("{}:{}".format(c,len(os.listdir("temp"))))
     c+=1
 
-data.to_json("all.json")
-data.to_csv("all.csv")
+#data.to_json("all.json")
+data.to_csv("all.csv",chunksize=400)
 print(data.head())
