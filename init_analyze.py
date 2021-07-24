@@ -5,6 +5,7 @@ print(len(os.listdir("temp")))
 #initialize into all.json
 print(os.getcwd())
 print("enter file amount >")
+logger = open("logs.dat","w")
 ing = True
 climit = int(input())
 c = 0
@@ -24,6 +25,8 @@ while(c < climit):#len(os.listdir("temp"))):
             print("{}:{}".format(c,len(os.listdir("temp"))))
             print(ing)
             ing = not(ing)
+    logger.write(str(c))
+    logger.write("\n")
     c+=1
 
 #data.to_json("all.json")
