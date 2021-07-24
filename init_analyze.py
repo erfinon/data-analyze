@@ -5,6 +5,7 @@ print(len(os.listdir("temp")))
 #initialize into all.json
 print(os.getcwd())
 print("enter file amount >")
+ing = True
 climit = int(input())
 c = 0
 while(c < climit):#len(os.listdir("temp"))):
@@ -21,6 +22,8 @@ while(c < climit):#len(os.listdir("temp"))):
             })
             data = data.append(data1,ignore_index=True)
             print("{}:{}".format(c,len(os.listdir("temp"))))
+            print(ing)
+            ing = not(ing)
     c+=1
 
 #data.to_json("all.json")
