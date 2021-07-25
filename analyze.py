@@ -12,10 +12,9 @@ print("Logger")
 def lformat(i):
         r = ""
         r += str(i//100)
-        r += str(int((i -(i%10))/10))
+        r += str((i - i//100*100 - i%10)//10)
         r += str(i%10)
         return r
 
 
-
-
+print(lformat(410))
